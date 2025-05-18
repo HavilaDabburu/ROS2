@@ -1,0 +1,18 @@
+[0.600s] Invoking command in '/root/ws/build/py_pubsub': PYTHONPATH=/root/ws/build/py_pubsub/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/ws/install/py_pubsub/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /root/ws/build/py_pubsub/build --no-deps symlink_data
+[0.841s] running develop
+[0.930s] running egg_info
+[0.930s] writing py_pubsub.egg-info/PKG-INFO
+[0.930s] writing dependency_links to py_pubsub.egg-info/dependency_links.txt
+[0.931s] writing entry points to py_pubsub.egg-info/entry_points.txt
+[0.931s] writing requirements to py_pubsub.egg-info/requires.txt
+[0.931s] writing top-level names to py_pubsub.egg-info/top_level.txt
+[0.933s] reading manifest file 'py_pubsub.egg-info/SOURCES.txt'
+[0.934s] writing manifest file 'py_pubsub.egg-info/SOURCES.txt'
+[0.936s] running build_ext
+[0.936s] Creating /root/ws/install/py_pubsub/lib/python3.10/site-packages/py-pubsub.egg-link (link to .)
+[0.937s] Installing number_publisher script to /root/ws/install/py_pubsub/lib/py_pubsub
+[0.938s] Installing square_subscriber script to /root/ws/install/py_pubsub/lib/py_pubsub
+[0.938s] 
+[0.938s] Installed /root/ws/build/py_pubsub
+[0.938s] running symlink_data
+[0.973s] Invoked command in '/root/ws/build/py_pubsub' returned '0': PYTHONPATH=/root/ws/build/py_pubsub/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/ws/install/py_pubsub/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py develop --editable --build-directory /root/ws/build/py_pubsub/build --no-deps symlink_data

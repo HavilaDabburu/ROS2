@@ -1,0 +1,4 @@
+[console_scripts]
+number_publisher = py_pubsub.number_publisher:main
+square_subscriber = py_pubsub.square_subscriber:main
+
