@@ -16,6 +16,8 @@
 - **Creating a workspace**
 - **Writing a simple publisher and subscriber (Python)**
 
+# MY NOTES
+- https://drive.google.com/file/d/15DDReQzUQ5XeWPcQao1XMZ_7PkywSPPK/view?usp=drivesdk
 # ROS 2 Humble Notes (Using Docker)
 
 ## 1. Install Docker
