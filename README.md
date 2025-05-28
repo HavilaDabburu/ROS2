@@ -181,3 +181,45 @@ ros2 run py_pubsub subscriber_member_function
 ## Sources
 - [ROS 2 Humble Official Website](https://docs.ros.org/en/humble/index.html)
 - ROS 2 Docker Tutorials
+# week 2
+##  What is DDS?
+
+**DDS** stands for **Data Distribution Service**.  
+It is a **middleware protocol and API standard** 
+
+DDS helps different software systems **communicate with each other in real-time**. It is designed to be **fast**, **reliable**, and work well even in systems where timing is very important — like robotics, vehicles, or medical devices.
+
+In DDS, data is shared using a **publish/subscribe model**:
+- A **publisher** sends data on a specific topic.
+- A **subscriber** receives data from that topic.
+- They don’t need to know about each other directly — DDS connects them automatically.
+
+---
+
+## What is Peer-to-Peer Communication?
+
+In DDS communication is **peer-to-peer**.  
+This means:
+- There is **no central server** or master controlling the system.
+- Each node (program) can **directly talk** to other nodes.
+- Nodes **automatically discover** each other on the network using something called **UDP multicast**.
+- After discovering, they send messages **directly** (using unicast).
+
+So instead of sending messages through a central point, the publisher and subscriber talk **straight to each other**.
+
+---
+
+## Why Did ROS 2 Drop the ROS Master?
+
+In **ROS 1**, there was **ROS Master**:
+- It was a central server that kept track of all publishers and subscribers.
+- If the ROS Master crashed, the whole system could stop working.
+- It was hard to use ROS 1 on multiple machines or in dynamic environments.
+
+In **ROS 2**, the ROS Master is **removed**.  
+Instead, DDS handles everything:
+- It manages discovery and communication **automatically**.
+- It works well across **multiple machines** and **complex networks**.
+- It is **more flexible, reliable, and scalable**.
+
+That’s why ROS 2 switched to **DDS and peer-to-peer communication**
