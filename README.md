@@ -182,6 +182,22 @@ ros2 run py_pubsub subscriber_member_function
 - [ROS 2 Humble Official Website](https://docs.ros.org/en/humble/index.html)
 - ROS 2 Docker Tutorials
 # week 2
+Sure! Here's your original list converted into clean Markdown format:
+
+# What I Learnt
+
+1. **DDS and peer-to-peer in ROS 2**
+   - Understood how ROS 2 uses DDS for peer-to-peer communication.
+
+2. **Why ROS 2 moved away from ROS 1's master**
+   - Learned the limitations of the centralized ROS 1 master and the benefits of ROS 2's decentralized architecture.
+
+3. **Skimmed ROS 2 discovery mechanisms**
+   - Briefly went through concepts like UDP multicast, discovery server, static discovery, etc.
+
+Let me know if you want this turned into a more detailed Markdown journal or study notes!
+
+
 ##  What is DDS?
 
 **DDS** stands for **Data Distribution Service**.  
