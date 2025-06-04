@@ -1,11 +1,11 @@
 Metadata-Version: 2.1
 Name: py-pubsub
 Version: 0.0.0
-Summary: Simple ROS 2 pub-sub example
+Summary: Example Python publisher and subscriber with QoS and launch file
 Home-page: UNKNOWN
-Maintainer: havila
-Maintainer-email: dabburuhavila27@gmail.com
-License: MIT
+Maintainer: your_name
+Maintainer-email: your_email@example.com
+License: Apache License 2.0
 Platform: UNKNOWN
 
 UNKNOWN

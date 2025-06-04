@@ -1,11 +1,18 @@
 import rclpy
 from rclpy.node import Node
+from rclpy.qos import QoSProfile, ReliabilityPolicy
 from std_msgs.msg import Int32
 
 class NumberPublisher(Node):
     def __init__(self):
         super().__init__('number_publisher')
-        self.publisher = self.create_publisher(Int32, 'number', 10)
+
+        qos_profile = QoSProfile(
+            depth=10,
+            reliability=ReliabilityPolicy.BEST_EFFORT
+        )
+
+        self.publisher = self.create_publisher(Int32, 'number', qos_profile)
         self.timer = self.create_timer(1.0, self.publish_number)
         self.num = 1
 
