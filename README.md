@@ -182,8 +182,6 @@ ros2 run py_pubsub subscriber_member_function
 - [ROS 2 Humble Official Website](https://docs.ros.org/en/humble/index.html)
 - ROS 2 Docker Tutorials
 # week 2
-Sure! Here's your original list converted into clean Markdown format:
-
 # What I Learnt
 
 1. *DDS and peer-to-peer in ROS 2*
