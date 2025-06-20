@@ -1,5 +1,0 @@
-  File "/root/ros2_ws/install/my_robot/lib/python3.10/site-packages/my_robot/stopper_node.py", line 31
-    if self.min_distance < self.threshold
-                                         ^
-SyntaxError: expected ':'
-
