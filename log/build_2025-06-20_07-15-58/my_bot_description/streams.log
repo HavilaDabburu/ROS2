@@ -1,0 +1,19 @@
+[1.060s] Invoking command in '/root/ros2_ws/src/my_bot_description': PYTHONPATH=/root/ros2_ws/build/my_bot_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/ros2_ws/install/my_bot_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_bot_description build --build-base /root/ros2_ws/build/my_bot_description/build install --record /root/ros2_ws/build/my_bot_description/install.log --single-version-externally-managed install_data
+[1.314s] running egg_info
+[1.315s] writing ../../build/my_bot_description/my_bot_description.egg-info/PKG-INFO
+[1.316s] writing dependency_links to ../../build/my_bot_description/my_bot_description.egg-info/dependency_links.txt
+[1.316s] writing requirements to ../../build/my_bot_description/my_bot_description.egg-info/requires.txt
+[1.316s] writing top-level names to ../../build/my_bot_description/my_bot_description.egg-info/top_level.txt
+[1.318s] reading manifest file '../../build/my_bot_description/my_bot_description.egg-info/SOURCES.txt'
+[1.319s] writing manifest file '../../build/my_bot_description/my_bot_description.egg-info/SOURCES.txt'
+[1.319s] running build
+[1.319s] running build_py
+[1.320s] running install
+[1.320s] running install_lib
+[1.322s] running install_data
+[1.322s] running install_egg_info
+[1.324s] removing '/root/ros2_ws/install/my_bot_description/lib/python3.10/site-packages/my_bot_description-0.0.0-py3.10.egg-info' (and everything under it)
+[1.325s] Copying ../../build/my_bot_description/my_bot_description.egg-info to /root/ros2_ws/install/my_bot_description/lib/python3.10/site-packages/my_bot_description-0.0.0-py3.10.egg-info
+[1.326s] running install_scripts
+[1.353s] writing list of installed files to '/root/ros2_ws/build/my_bot_description/install.log'
+[1.404s] Invoked command in '/root/ros2_ws/src/my_bot_description' returned '0': PYTHONPATH=/root/ros2_ws/build/my_bot_description/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/ros2_ws/install/my_bot_description/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/my_bot_description build --build-base /root/ros2_ws/build/my_bot_description/build install --record /root/ros2_ws/build/my_bot_description/install.log --single-version-externally-managed install_data

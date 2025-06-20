@@ -1,0 +1,4 @@
+[console_scripts]
+starter_node = my_robot.starter_node:main
+stopper_node = my_robot.stopper_node:main
+

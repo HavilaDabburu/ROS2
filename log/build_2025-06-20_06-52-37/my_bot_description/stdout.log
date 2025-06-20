@@ -1,0 +1,30 @@
+running egg_info
+creating ../../build/my_bot_description/my_bot_description.egg-info
+writing ../../build/my_bot_description/my_bot_description.egg-info/PKG-INFO
+writing dependency_links to ../../build/my_bot_description/my_bot_description.egg-info/dependency_links.txt
+writing requirements to ../../build/my_bot_description/my_bot_description.egg-info/requires.txt
+writing top-level names to ../../build/my_bot_description/my_bot_description.egg-info/top_level.txt
+writing manifest file '../../build/my_bot_description/my_bot_description.egg-info/SOURCES.txt'
+reading manifest file '../../build/my_bot_description/my_bot_description.egg-info/SOURCES.txt'
+writing manifest file '../../build/my_bot_description/my_bot_description.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /root/ros2_ws/build/my_bot_description/build
+creating /root/ros2_ws/build/my_bot_description/build/lib
+creating /root/ros2_ws/build/my_bot_description/build/lib/my_bot_description
+copying my_bot_description/__init__.py -> /root/ros2_ws/build/my_bot_description/build/lib/my_bot_description
+running install
+running install_lib
+creating /root/ros2_ws/install/my_bot_description/lib/python3.10/site-packages/my_bot_description
+copying /root/ros2_ws/build/my_bot_description/build/lib/my_bot_description/__init__.py -> /root/ros2_ws/install/my_bot_description/lib/python3.10/site-packages/my_bot_description
+byte-compiling /root/ros2_ws/install/my_bot_description/lib/python3.10/site-packages/my_bot_description/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /root/ros2_ws/install/my_bot_description/share/my_bot_description/urdf
+copying urdf/bot.xacro -> /root/ros2_ws/install/my_bot_description/share/my_bot_description/urdf
+creating /root/ros2_ws/install/my_bot_description/share/my_bot_description/launch
+copying launch/view_model.launch.py -> /root/ros2_ws/install/my_bot_description/share/my_bot_description/launch
+copying package.xml -> /root/ros2_ws/install/my_bot_description/share/my_bot_description
+running install_egg_info
+Copying ../../build/my_bot_description/my_bot_description.egg-info to /root/ros2_ws/install/my_bot_description/lib/python3.10/site-packages/my_bot_description-0.0.0-py3.10.egg-info
+running install_scripts
+writing list of installed files to '/root/ros2_ws/build/my_bot_description/install.log'
