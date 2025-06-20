@@ -239,3 +239,230 @@ Instead, DDS handles everything:
 - It is *more flexible, reliable, and scalable*.
 
 That’s why ROS 2 switched to *DDS and peer-to-peer communication*
+
+# Four-Wheel-Robot
+
+ A **four-wheeled-Robot** in **ROS 2 Humble** with **LIDAR**, **camera**, **teleoperation**, and **obstacle avoidance**, all integrated into Gazebo.
+
+---
+
+## Step-by-Step 
+
+### 1. Set Up ROS 2 Humble in Docker with GUI Support
+
+```bash
+xhost +local:root
+
+docker run -it \
+  --net=host \
+  --env="DISPLAY" \
+  --volume="/tmp/.X11-unix:/tmp/.X11-unix:rw" \
+  --privileged \
+  ros:humble bash
+```
+
+### 2. Create ROS 2 Workspace and Package
+
+```bash
+mkdir -p ~/ros2_ws/src
+cd ~/ros2_ws/src
+
+# Create a Python ROS 2 package
+ros2 pkg create --build-type ament_python my_robot
+
+cd ~/ros2_ws
+colcon build --packages-select my_robot
+source install/setup.bash
+```
+
+---
+
+## Robot Description
+
+### 3. Create URDF
+
+* Create `urdf/` folder inside your package:
+
+  ```bash
+  mkdir -p ~/ros2_ws/src/my_robot/urdf
+  ```
+
+* Build `four_wheel_bot.urdf`:
+
+  * Base link
+  * 4 wheels
+  * Proper joints and transforms
+
+* Visualize it:
+
+  ```bash
+  ros2 run robot_state_publisher robot_state_publisher urdf/four_wheel_bot.urdf
+  ros2 run rviz2 rviz2
+  ```
+
+---
+
+### 4. Convert to Xacro
+
+* Create `four_wheel_bot.xacro`
+* Convert and test it:
+
+  ```bash
+  xacro four_wheel_bot.xacro > test.urdf
+  check_urdf test.urdf
+  ```
+
+---
+
+### 5. Add Differential Drive Plugin for Movement
+
+* Added the `libgazebo_ros_diff_drive.so` plugin to the robot’s base.
+* Only rear wheels are controlled initially.
+
+---
+
+### 6. Improve Dynamics
+
+* Added `mass` and `inertial` tags to all links.
+* Fixed physical behavior in simulation.
+
+---
+
+### 7. Add Skid Steering
+
+* suggested by an intern in unofficial group.
+* Enabled **skid steering** so the robot could turn smoothly.
+* Skid steering = both front and rear wheels rotate (but front may not drive).
+* Movement was much more natural.
+
+---
+
+## Sensor 
+
+### 8. Add LIDAR Sensor
+
+* Added LIDAR link + joint.
+* Used `gazebo_ros_ray_sensor` plugin.
+* Verified data:
+
+  ```bash
+  ros2 topic echo /scan
+  ```
+
+---
+
+### 9. Add Camera Sensor
+
+* Mounted camera on a stand.
+* Added `gazebo_ros_camera` plugin.
+* View the feed:
+
+  ```bash
+  ros2 run rqt_image_view rqt_image_view
+  ```
+
+##  Behavior Node
+
+### 10. Add Stopper Node
+
+* Subscribed to `/scan`
+* Published to `/cmd_vel`
+* Stops robot when obstacle is < 1m away from LIDAR i.e 0.5 away from robot front
+
+Used with:
+
+```bash
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+```
+
+> The node acts as a **safety filter**: it overrides teleop **only if needed**.
+
+---
+
+## Gazebo World
+
+### 11. Created Custom World with Wall
+
+* In `world/obstacle_world.world`:
+
+```xml
+<pose>0 10 0.5 0 0 0</pose>
+```
+
+* Places a wall 10 meters in front of the robot.
+
+---
+
+## Final Launch
+
+### 12. Unified Everything in `view_robot.launch.py`
+
+```bash
+ros2 launch my_robot view_robot.launch.py
+```
+
+* Launches:
+
+  * Gazebo
+  * Robot description
+  * Stopper node
+
+---
+
+## Project Structure
+
+```
+ros2_ws/
+└── src/
+    └── my_robot/
+        ├── urdf/
+        │   └── four_wheel_bot.xacro
+        ├── world/
+        │   └── obstacle_world.world
+        ├── launch/
+        │   └── view_robot.launch.py
+        ├── my_robot/
+        │   └── stopper_node.py
+        ├── package.xml
+        └── setup.py
+```
+
+##  Useful ROS 2 Commands
+
+```bash
+# Build & Source
+colcon build --packages-select my_robot
+source install/setup.bash
+
+# Launch the simulation
+ros2 launch my_robot view_robot.launch.py
+
+# Visualize LIDAR
+ros2 topic echo /scan
+
+# Drive the robot
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+
+# View camera
+ros2 run rqt_image_view rqt_image_view
+```
+
+## Skid Steering
+
+Skid steering turns by changing speed between left and right wheels:
+
+* Equal speed → straight
+* One side faster → turns
+* One side backward → spin in place
+
+Used by tanks, bulldozers, and now our robot!
+
+---
+
+## Final Result
+
+* Robot launches in Gazebo
+* Can be driven via keyboard
+* Stops automatically near wall
+* Publishes `/scan` and `/camera/image_raw`
+* All integrated in one launch file
