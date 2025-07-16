@@ -239,3 +239,92 @@ Instead, DDS handles everything:
 - It is *more flexible, reliable, and scalable*.
 
 That’s why ROS 2 switched to *DDS and peer-to-peer communication*
+
+# Orange Cone Detection with ROS 2, Gazebo, and OpenCv
+## Project Structure
+
+ros2_ws/
+├── src/
+│   └── my_robot/
+│       ├── launch/
+│       │   └── view_robot.launch.py
+│       ├── urdf/
+│       │   └── four_wheel_bot.xacro
+│       ├── world/
+│       │   └── obstacle_world.world
+│       ├── models/
+│       │   └── orange_cone/...
+│       └── my_robot/
+│           └── cone_detector.py
+
+## Steps to Run
+
+1. Install ROS 2 Humble
+
+Make sure ROS 2 Humble and Gazebo 11 are installed and sourced.
+
+2. Clone and Build
+
+cd ~/ros2_ws  
+colcon build --symlink-install  
+source install/setup.bash
+
+3. Launch Simulation
+
+ros2 launch my_robot view_robot.launch.py
+
+4. Run Detection Node
+
+ros2 run my_robot cone_detector
+
+## Cone Model
+
+We used a construction-style cone downloaded from GitHub.  
+Placed in: `~/.gazebo/models/orange_cone/`
+
+We updated `model.sdf` to use the mesh and scaled it:
+
+<mesh>
+  <uri>model://orange_cone/meshes/construction_cone.dae</uri>
+  <scale>10 10 10</scale>
+</mesh>
+
+## Detection Logic
+
+The `cone_detector.py` node:
+- Subscribes to `/camera/image_raw`
+- Converts ROS image to OpenCV using cv_bridge
+- Filters orange color in HSV
+- Draws bounding box and displays the image
+
+## Common Issues and Fixes
+
+Problem: Gazebo fails with "Address already in use"  
+Fix: kill -9 <gzserver PID>
+
+Problem: Cone not visible  
+Fix: Increase <scale> and adjust <pose> in world file
+
+Problem: No mesh specified  
+Fix: Check <geometry><mesh><uri> 
+
+Problem: GUI issues inside Docker container  
+Fix: Export DISPLAY, LIBGL_ALWAYS_SOFTWARE, and XDG_RUNTIME_DIR
+
+
+## Final Result
+
+- The robot and cone are visible in Gazebo
+- The OpenCV window highlights the orange cone 
+
+## Credits
+
+Cone Model: https://github.com/osrf/gazebo_models/tree/master/construction_cone  
+
+## Summary
+
+- Created a robot with camera and spawned in Gazebo
+- Added a construction-style cone model to the world
+- Wrote and ran OpenCV node to detect orange color
+- Faced errors like model not found, gzserver already running, and mesh URI issues
+- Solved by killing existing gazebo instances, checking model paths, and correcting world sdf file

@@ -33,6 +33,7 @@ setup(
         'console_scripts': [
             'stopper_node = my_robot.stopper_node:main',
             'starter_node = my_robot.starter_node:main',
+            'cone_detector = my_robot.cone_detector:main',
 ],
     },
 )

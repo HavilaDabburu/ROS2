@@ -1,0 +1,5 @@
+[console_scripts]
+cone_detector = my_robot.cone_detector:main
+starter_node = my_robot.starter_node:main
+stopper_node = my_robot.stopper_node:main
+

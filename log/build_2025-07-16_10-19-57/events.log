@@ -1,0 +1,65 @@
+[0.000000] (-) TimerEvent: {}
+[0.000948] (my_robot) JobQueued: {'identifier': 'my_robot', 'dependencies': OrderedDict()}
+[0.000994] (py_pubsub) JobQueued: {'identifier': 'py_pubsub', 'dependencies': OrderedDict()}
+[0.001016] (my_robot) JobStarted: {'identifier': 'my_robot'}
+[0.014682] (py_pubsub) JobStarted: {'identifier': 'py_pubsub'}
+[0.099484] (-) TimerEvent: {}
+[0.200001] (-) TimerEvent: {}
+[0.300624] (-) TimerEvent: {}
+[0.401079] (-) TimerEvent: {}
+[0.501634] (-) TimerEvent: {}
+[0.602165] (-) TimerEvent: {}
+[0.702687] (-) TimerEvent: {}
+[0.803236] (-) TimerEvent: {}
+[0.903728] (-) TimerEvent: {}
+[0.976103] (py_pubsub) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/py_pubsub', 'build', '--build-base', '/root/ros2_ws/build/py_pubsub/build', 'install', '--record', '/root/ros2_ws/build/py_pubsub/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/root/ros2_ws/src/py_pubsub', 'env': {'HOSTNAME': 'envy', 'SHLVL': '1', 'LIBGL_ALWAYS_SOFTWARE': '1', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/root', 'OLDPWD': '/root/ros2_ws/src', 'ROS_PYTHON_VERSION': '3', 'ROS_DISTRO': 'humble', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'GAZEBO_MODEL_PATH': ':/root/.gazebo/models', 'ROS_LOCALHOST_ONLY': '0', 'QT_X11_NO_MITSHM': '1', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'GAZEBO_MODEL_DATABASE_URI': '', 'PWD': '/root/ros2_ws/build/py_pubsub', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/root/ros2_ws/build/py_pubsub/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/ros2_ws/install/py_pubsub/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[0.982785] (my_robot) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../../build/my_robot', 'build', '--build-base', '/root/ros2_ws/build/my_robot/build', 'install', '--record', '/root/ros2_ws/build/my_robot/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/root/ros2_ws/src/my_robot', 'env': {'HOSTNAME': 'envy', 'SHLVL': '1', 'LIBGL_ALWAYS_SOFTWARE': '1', 'LD_LIBRARY_PATH': '/usr/lib/x86_64-linux-gnu/gazebo-11/plugins:/opt/ros/humble/opt/rviz_ogre_vendor/lib:/opt/ros/humble/lib/x86_64-linux-gnu:/opt/ros/humble/lib', 'HOME': '/root', 'OLDPWD': '/root/ros2_ws/src', 'ROS_PYTHON_VERSION': '3', 'ROS_DISTRO': 'humble', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'TERM': 'xterm', 'GAZEBO_MODEL_PATH': ':/root/.gazebo/models', 'ROS_LOCALHOST_ONLY': '0', 'QT_X11_NO_MITSHM': '1', 'PATH': '/opt/ros/humble/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:', 'AMENT_PREFIX_PATH': '/opt/ros/humble', 'GAZEBO_MODEL_DATABASE_URI': '', 'PWD': '/root/ros2_ws/build/my_robot', 'LC_ALL': 'C.UTF-8', 'PYTHONPATH': '/root/ros2_ws/build/my_robot/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/ros2_ws/install/my_robot/lib/python3.10/site-packages:/opt/ros/humble/lib/python3.10/site-packages:/opt/ros/humble/local/lib/python3.10/dist-packages', 'COLCON': '1'}, 'shell': False}
+[1.003861] (-) TimerEvent: {}
+[1.104318] (-) TimerEvent: {}
+[1.204861] (-) TimerEvent: {}
+[1.222396] (py_pubsub) StdoutLine: {'line': b'running egg_info\n'}
+[1.223085] (py_pubsub) StdoutLine: {'line': b'writing ../../build/py_pubsub/py_pubsub.egg-info/PKG-INFO\n'}
+[1.223509] (py_pubsub) StdoutLine: {'line': b'writing dependency_links to ../../build/py_pubsub/py_pubsub.egg-info/dependency_links.txt\n'}
+[1.223778] (py_pubsub) StdoutLine: {'line': b'writing entry points to ../../build/py_pubsub/py_pubsub.egg-info/entry_points.txt\n'}
+[1.223965] (py_pubsub) StdoutLine: {'line': b'writing requirements to ../../build/py_pubsub/py_pubsub.egg-info/requires.txt\n'}
+[1.224062] (py_pubsub) StdoutLine: {'line': b'writing top-level names to ../../build/py_pubsub/py_pubsub.egg-info/top_level.txt\n'}
+[1.224773] (my_robot) StdoutLine: {'line': b'running egg_info\n'}
+[1.225552] (my_robot) StdoutLine: {'line': b'writing ../../build/my_robot/my_robot.egg-info/PKG-INFO\n'}
+[1.225870] (my_robot) StdoutLine: {'line': b'writing dependency_links to ../../build/my_robot/my_robot.egg-info/dependency_links.txt\n'}
+[1.226049] (py_pubsub) StdoutLine: {'line': b"reading manifest file '../../build/py_pubsub/py_pubsub.egg-info/SOURCES.txt'\n"}
+[1.226207] (my_robot) StdoutLine: {'line': b'writing entry points to ../../build/my_robot/my_robot.egg-info/entry_points.txt\n'}
+[1.226285] (my_robot) StdoutLine: {'line': b'writing requirements to ../../build/my_robot/my_robot.egg-info/requires.txt\n'}
+[1.226406] (my_robot) StdoutLine: {'line': b'writing top-level names to ../../build/my_robot/my_robot.egg-info/top_level.txt\n'}
+[1.227248] (py_pubsub) StdoutLine: {'line': b"writing manifest file '../../build/py_pubsub/py_pubsub.egg-info/SOURCES.txt'\n"}
+[1.227428] (py_pubsub) StdoutLine: {'line': b'running build\n'}
+[1.227502] (py_pubsub) StdoutLine: {'line': b'running build_py\n'}
+[1.227814] (py_pubsub) StdoutLine: {'line': b'running install\n'}
+[1.228186] (py_pubsub) StdoutLine: {'line': b'running install_lib\n'}
+[1.228419] (my_robot) StdoutLine: {'line': b"reading manifest file '../../build/my_robot/my_robot.egg-info/SOURCES.txt'\n"}
+[1.229540] (my_robot) StdoutLine: {'line': b"writing manifest file '../../build/my_robot/my_robot.egg-info/SOURCES.txt'\n"}
+[1.229766] (py_pubsub) StdoutLine: {'line': b'running install_data\n'}
+[1.229906] (my_robot) StdoutLine: {'line': b'running build\n'}
+[1.229969] (my_robot) StdoutLine: {'line': b'running build_py\n'}
+[1.230023] (py_pubsub) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.230214] (my_robot) StdoutLine: {'line': b'running install\n'}
+[1.230513] (my_robot) StdoutLine: {'line': b'running install_lib\n'}
+[1.231866] (my_robot) StdoutLine: {'line': b'running install_data\n'}
+[1.232068] (py_pubsub) StdoutLine: {'line': b"removing '/root/ros2_ws/install/py_pubsub/lib/python3.10/site-packages/py_pubsub-0.0.0-py3.10.egg-info' (and everything under it)\n"}
+[1.232279] (my_robot) StdoutLine: {'line': b'running install_egg_info\n'}
+[1.232726] (py_pubsub) StdoutLine: {'line': b'Copying ../../build/py_pubsub/py_pubsub.egg-info to /root/ros2_ws/install/py_pubsub/lib/python3.10/site-packages/py_pubsub-0.0.0-py3.10.egg-info\n'}
+[1.234116] (py_pubsub) StdoutLine: {'line': b'running install_scripts\n'}
+[1.234297] (my_robot) StdoutLine: {'line': b"removing '/root/ros2_ws/install/my_robot/lib/python3.10/site-packages/my_robot-0.0.1-py3.10.egg-info' (and everything under it)\n"}
+[1.234861] (my_robot) StdoutLine: {'line': b'Copying ../../build/my_robot/my_robot.egg-info to /root/ros2_ws/install/my_robot/lib/python3.10/site-packages/my_robot-0.0.1-py3.10.egg-info\n'}
+[1.236253] (my_robot) StdoutLine: {'line': b'running install_scripts\n'}
+[1.260368] (py_pubsub) StdoutLine: {'line': b'Installing number_publisher script to /root/ros2_ws/install/py_pubsub/lib/py_pubsub\n'}
+[1.260744] (py_pubsub) StdoutLine: {'line': b'Installing square_subscriber script to /root/ros2_ws/install/py_pubsub/lib/py_pubsub\n'}
+[1.261013] (my_robot) StdoutLine: {'line': b'Installing starter_node script to /root/ros2_ws/install/my_robot/lib/my_robot\n'}
+[1.261243] (my_robot) StdoutLine: {'line': b'Installing stopper_node script to /root/ros2_ws/install/my_robot/lib/my_robot\n'}
+[1.261301] (py_pubsub) StdoutLine: {'line': b"writing list of installed files to '/root/ros2_ws/build/py_pubsub/install.log'\n"}
+[1.261580] (my_robot) StdoutLine: {'line': b"writing list of installed files to '/root/ros2_ws/build/my_robot/install.log'\n"}
+[1.305111] (-) TimerEvent: {}
+[1.307105] (py_pubsub) CommandEnded: {'returncode': 0}
+[1.321043] (py_pubsub) JobEnded: {'identifier': 'py_pubsub', 'rc': 0}
+[1.321614] (my_robot) CommandEnded: {'returncode': 0}
+[1.351015] (my_robot) JobEnded: {'identifier': 'my_robot', 'rc': 0}
+[1.352286] (-) EventReactorShutdown: {}
